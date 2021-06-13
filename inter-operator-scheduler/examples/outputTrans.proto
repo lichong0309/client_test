@@ -5,9 +5,7 @@ service Trans{
 }
 
 
-message outputData{
-
-}
+message outputData{}
 
 
 message inputData{
