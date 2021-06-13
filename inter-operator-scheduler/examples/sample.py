@@ -74,14 +74,14 @@ print(optimized_graph)
 print(f'Optimized schedule: {np.mean(opt_latency):.3f} ms')
 print(f'     Stage latency: {np.mean(np.array(stage_latency).reshape(6, -1), axis=0)}')
 
-# n = 1
-# dummy_inputs = receiveInput(n)  # 接收信息output
+n = 1
+dummy_inputs = receiveInput(n)  # 接收信息output
 
 # inference on ios runtime
-dummy_inputs = np.random.randn(1, 3, 224, 224)
+# dummy_inputs = np.random.randn(1, 375, 15, 15)
 output = ios.ios_runtime.graph_inference(optimized_graph, batch_size=1, input=dummy_inputs)
-print("test_1:",output)
-print("test_2:",np.ndarray.reshape(output))
+# print("test_1:",output)
+# print("test_2:",np.ndarray.reshape(output))
 
 
 

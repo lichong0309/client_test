@@ -14,7 +14,7 @@ cfgs = {
 def vgg_net(cfg, name):
     reset_name()
 
-    pv = placeholder(output_shape=(3, 224, 224))
+    pv = placeholder(output_shape=(512,28,28))
     block = Block(pv.node, None, [], None)
 
     v = pv
