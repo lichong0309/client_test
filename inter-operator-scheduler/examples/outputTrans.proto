@@ -6,7 +6,7 @@ service Trans{
 
 
 message outputData{
-    int32 number = 1;
+
 }
 
 

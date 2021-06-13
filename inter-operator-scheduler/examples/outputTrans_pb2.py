@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11outputTrans.proto\"\x1c\n\noutputData\x12\x0e\n\x06number\x18\x01 \x01(\x05\"\x1a\n\tinputData\x12\r\n\x05idata\x18\x01 \x03(\x02\x32\x32\n\x05Trans\x12)\n\x0coutput_trans\x12\x0b.outputData\x1a\n.inputData\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x11outputTrans.proto\"\x0c\n\noutputData\"\x1a\n\tinputData\x12\r\n\x05idata\x18\x01 \x03(\x02\x32\x32\n\x05Trans\x12)\n\x0coutput_trans\x12\x0b.outputData\x1a\n.inputData\"\x00\x62\x06proto3'
 )
 
 
@@ -33,13 +33,6 @@ _OUTPUTDATA = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='number', full_name='outputData.number', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -53,7 +46,7 @@ _OUTPUTDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=49,
+  serialized_end=33,
 )
 
 
@@ -84,8 +77,8 @@ _INPUTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51,
-  serialized_end=77,
+  serialized_start=35,
+  serialized_end=61,
 )
 
 DESCRIPTOR.message_types_by_name['outputData'] = _OUTPUTDATA
@@ -115,8 +108,8 @@ _TRANS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=79,
-  serialized_end=129,
+  serialized_start=63,
+  serialized_end=113,
   methods=[
   _descriptor.MethodDescriptor(
     name='output_trans',
