@@ -1,0 +1,15 @@
+syntax = 'proto3';
+
+service Trans{
+    rpc output_trans(outputData) returns (inputData) {}
+}
+
+
+message outputData{
+    int32 number = 1;
+}
+
+
+message inputData{
+    repeated float idata = 1;
+}
