@@ -30,13 +30,13 @@ def server():
 
 def  receiveInput(n):
     
-    # channel = grpc.insecure_channel('163.143.0.101:56789')                  # 连上服务器
-    with grpc.secure_channel('163.143.0.101:56789', grpc.ssl_channel_credentials()) as channel:
-        print("connect the server...")
-        stub = outputTrans_pb2_grpc.TransStub(channel)
-        print("test_2")
-        response = stub.output_trans(outputTrans_pb2.outputData(number = n))             
-        print("data trans ...")    
+    channel = grpc.insecure_channel('163.143.0.101:56789')                  # 连上服务器
+    # with grpc.secure_channel('163.143.0.101:56789', grpc.ssl_channel_credentials()) as channel:
+    print("connect the server...")
+    stub = outputTrans_pb2_grpc.TransStub(channel)
+    print("test_2")
+    response = stub.output_trans(outputTrans_pb2.outputData(number = n))             
+    print("data trans ...")    
     return response.idata
 
 
