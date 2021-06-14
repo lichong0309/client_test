@@ -38,7 +38,7 @@ def  receiveInput():
     response = stub.output_trans(outputTrans_pb2.outputData())             
     print("data trans ...")    
     input = response.idata
-    input = np.array(input)
+    # input = np.array(input)
     return input
 
 
@@ -84,9 +84,10 @@ print(f'     Stage latency: {np.mean(np.array(stage_latency).reshape(6, -1), axi
 
 dummy_inputs = receiveInput()             # 接收信息output
 
+print("test_input:",dummy_inputs)
 # inference on ios runtime
 # dummy_inputs = np.random.randn(1, 375, 15, 15)
-output = ios.ios_runtime.graph_inference(optimized_graph, batch_size=1, input=dummy_inputs)
+# output = ios.ios_runtime.graph_inference(optimized_graph, batch_size=1, input=dummy_inputs)
 # print("test_1:",output)
 # print("test_2:",np.ndarray.reshape(output))
 

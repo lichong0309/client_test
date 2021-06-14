@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11outputTrans.proto\"\x0c\n\noutputData\"\x1a\n\tinputData\x12\r\n\x05idata\x18\x01 \x03(\x02\x32\x32\n\x05Trans\x12)\n\x0coutput_trans\x12\x0b.outputData\x1a\n.inputData\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x11outputTrans.proto\"\x0c\n\noutputData\"\x1a\n\tinputData\x12\r\n\x05idata\x18\x01 \x01(\x05\x32\x32\n\x05Trans\x12)\n\x0coutput_trans\x12\x0b.outputData\x1a\n.inputData\"\x00\x62\x06proto3'
 )
 
 
@@ -60,8 +60,8 @@ _INPUTDATA = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='idata', full_name='inputData.idata', index=0,
-      number=1, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),

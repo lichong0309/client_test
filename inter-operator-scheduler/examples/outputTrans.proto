@@ -9,5 +9,5 @@ message outputData{}
 
 
 message inputData{
-    repeated float idata = 1;
+    int32 idata = 1;
 }
