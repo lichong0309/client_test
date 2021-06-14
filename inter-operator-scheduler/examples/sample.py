@@ -35,7 +35,7 @@ def  receiveInput():
     print("connect the server...")
     stub = outputTrans_pb2_grpc.TransStub(channel)
     print("test_2")
-    response = stub.output_trans(request_serializer=outputTrans_pb2.outputData())             
+    response = stub.output_trans()             
     print("data trans ...")    
     input = response.idata
     return input
