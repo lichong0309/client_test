@@ -35,9 +35,10 @@ def  receiveInput():
     print("connect the server...")
     stub = outputTrans_pb2_grpc.TransStub(channel)
     print("test_2")
-    response = stub.output_trans()             
+    response = stub.output_trans(outputTrans_pb2.outputData())             
     print("data trans ...")    
     input = response.idata
+    input = np.array(input)
     return input
 
 
