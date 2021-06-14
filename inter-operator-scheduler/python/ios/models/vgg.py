@@ -3,8 +3,8 @@ import ios
 
 cfgs = {
     # 'A': [64, 'M', 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M'],
-    'A': [64, 'M', 128, 'M', 256, 256, 'M'],
-    # 'A':[512,512,'M',512,512,'M'],
+    # 'A': [64, 'M', 128, 'M', 256, 256, 'M'],
+    'A':[512,512,'M',512,512,'M'],
     'B': [64, 64, 'M', 128, 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M'],
     'D': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512, 'M', 512, 512, 512, 'M'],
     'E': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 256, 'M', 512, 512, 512, 512, 'M', 512, 512, 512, 512, 'M'],
@@ -23,8 +23,8 @@ def vgg_net(cfg, name):
             v = pool2d(block, [[v]], pool_type='max', kernel=(2, 2), stride=(2, 2))
         else:
             v = conv2d(block, [[v]], c, kernel=(3, 3), stride=(1, 1), padding=(1, 1), act="relu")
-    out = ios.identity(block, inputs=[[v]], is_exit=True)  # concat v1, v2, and v3
-    # v = pool2d(block, [[v]], pool_type='global_avg', is_exit=True)
+    # out = ios.identity(block, inputs=[[v]], is_exit=True)  # concat v1, v2, and v3
+    v = pool2d(block, [[v]], pool_type='global_avg', is_exit=True)
     graph = Graph(name, pv.node, [block])
     graph.init_weights()
     return graph
