@@ -30,7 +30,7 @@ def server():
 
 def  receiveInput():
     
-    channel = grpc.insecure_channel('163.143.0.101:56789')                  # 连上服务器
+    channel = grpc.insecure_channel('localhost:56789')                  # 连上服务器
     # with grpc.secure_channel('163.143.0.101:56789', grpc.ssl_channel_credentials()) as channel:
     print("connect the server...")
     stub = outputTrans_pb2_grpc.TransStub(channel)
